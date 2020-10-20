@@ -1,0 +1,23 @@
+-------------------------------
+mardi 1 janvier 2019, 01:46:33 (UTC+0100)
+-------------------------------
+mardi 1 janvier 2019, 02:09:57 (UTC+0100)
+-------------------------------
+mardi 1 janvier 2019, 02:16:52 (UTC+0100)
+make -C src/ clean
+make[1]: Entering directory '/media/odroidh2/Alexis/r8125-9.003.05/src'
+make -C /lib/modules/5.3.0-28-generic/build M=/media/odroidh2/Alexis/r8125-9.003.05/src clean
+make[2]: Entering directory '/usr/src/linux-headers-5.3.0-28-generic'
+make[2]: Leaving directory '/usr/src/linux-headers-5.3.0-28-generic'
+make[1]: Leaving directory '/media/odroidh2/Alexis/r8125-9.003.05/src'
+make -C src/ modules
+make[1]: Entering directory '/media/odroidh2/Alexis/r8125-9.003.05/src'
+make -C /lib/modules/5.3.0-28-generic/build M=/media/odroidh2/Alexis/r8125-9.003.05/src modules
+make[2]: Entering directory '/usr/src/linux-headers-5.3.0-28-generic'
+  CC [M]  /media/odroidh2/Alexis/r8125-9.003.05/src/r8125_n.o
+scripts/Makefile.build:288: recipe for target '/media/odroidh2/Alexis/r8125-9.003.05/src/r8125_n.o' failed
+Makefile:1655: recipe for target '_module_/media/odroidh2/Alexis/r8125-9.003.05/src' failed
+make[2]: Leaving directory '/usr/src/linux-headers-5.3.0-28-generic'
+Makefile:139: recipe for target 'modules' failed
+make[1]: Leaving directory '/media/odroidh2/Alexis/r8125-9.003.05/src'
+Makefile:40: recipe for target 'modules' failed
