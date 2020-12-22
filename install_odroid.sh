@@ -15,12 +15,6 @@ echo 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic m
 echo -e "\n**** sudo apt update and upgrade ****"
 apt-get -y update && apt-get -y upgrade
 
-#echo -e "\n**** Install k4a-tools ****"
-#apt-get ACCEPT_EULA=1 ACCEPT=1 install -y k4a-tools=1.4.0
-
-#echo -e "\n**** Install libk4a1.4-dev ****"
-#apt-get install -y libk4a1.4-dev
-
 echo -e "\n**** Install dependencies for Opencv ****"
 apt-get install -y build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 apt-get install -y python3-dev python3-numpy libtbb2 libtbb-dev
@@ -53,7 +47,20 @@ apt-get install -y python-pip python3-pip
 python -m pip install pyserial
 
 
-EOF
+cd /home/odroidh2/Downloads/
+echo -e "\n*** Git clone Azure kinect SDK ****"
+git clone -b release/1.4.x https://github.com/microsoft/Azure-Kinect-Sensor-SDK.git
+apt-get -y update && apt-get -y upgrade
+apt-get install -y pkg-config ninja-build doxygen clang gcc-multilib g++-multilib python3 git-lfs nasm cmake libgl1-mesa-dev libsoundio-dev libvulkan-dev libx11-dev libxcursor-dev libxinerama-dev libxrandr-dev libusb-1.0-0-dev libssl-dev libudev-dev mesa-common-dev uuid-dev libopencv-dev
+apt -y autoremove
 
+echo -e "\n*** Install Azure kinect SDK ****"
+cd Azure-Kinect-Sensor-SDK/
+mkdir build && cd build
+cmake .. -GNinja
+ninja
+ninja install
+
+EOF
 
 pkg-config --modversion opencv
