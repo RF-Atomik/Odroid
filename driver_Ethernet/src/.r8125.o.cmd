@@ -1,0 +1,1 @@
+cmd_/home/odroidh2/Odroid/driver_Ethernet/src/r8125.o := ld -m elf_x86_64 -z max-page-size=0x200000   -r -o /home/odroidh2/Odroid/driver_Ethernet/src/r8125.o /home/odroidh2/Odroid/driver_Ethernet/src/r8125_n.o /home/odroidh2/Odroid/driver_Ethernet/src/rtl_eeprom.o /home/odroidh2/Odroid/driver_Ethernet/src/rtltool.o 

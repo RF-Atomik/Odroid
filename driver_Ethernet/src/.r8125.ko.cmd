@@ -1,0 +1,1 @@
+cmd_/home/odroidh2/Odroid/driver_Ethernet/src/r8125.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/odroidh2/Odroid/driver_Ethernet/src/r8125.ko /home/odroidh2/Odroid/driver_Ethernet/src/r8125.o /home/odroidh2/Odroid/driver_Ethernet/src/r8125.mod.o ;  true
